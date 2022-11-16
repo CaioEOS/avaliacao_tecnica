@@ -54,12 +54,24 @@ const pessoas = [
     email: "Antonio@gmail.com",
     telefone: "(99) 99999-9999",
     datapreec: "19/10/2022",
-  }
+  },
 ];
 
 function adicionar() {
-
+  var nome = document.getElementById("nome").value;
+  var idade = Number(document.getElementById("idade").value);
+  var profissao = document.getElementById("profissao").value;
+  var email = document.getElementById("email").value;
+  var telefone = document.getElementById("telefone").value;
+  const hoje = new Date()
+  const dia = hoje.getDate().toString().padStart(2,'0')
+  const mes = String(hoje.getMonth() + 1).padStart(2,'0')
+  const ano = hoje.getFullYear()
+  const dataAtual = `${dia}/${mes}/${ano}`
+  pessoas.push({name:nome, age:idade, profissao:profissao, email:email, telefone:telefone, datapreec:dataAtual});
+  console.log(pessoas);
 }
+
 
 /*function renderPessoas(data) {
   data.map((pessoa) => {
@@ -84,22 +96,18 @@ function adicionar() {
 renderPessoas(pessoas);
 */
 
-/* 3 */ const pessoa = pessoas.find(pessoa => pessoa.name === 'Gabriel Gomes');
-console.log(pessoa)
+/* 3 */ const pessoa = pessoas.find((pessoa) => pessoa.name === "Gabriel Gomes");
+console.log(pessoa);
 
-/* 4 */ const criarVetor = pessoas.map(pessoa => pessoa.name);
-console.log(criarVetor)
+/* 4 */ const criarVetor = pessoas.map((pessoa) => pessoa.name);
+console.log(criarVetor);
 
-/* 5 */ const pessoasComId = pessoas.map((pessoa, index) => {
-    return {
-        id: index + 1,
-        ...pessoa
-      }
-    });
-console.log(pessoasComId)
+/* 5 */ const pessoasComId = pessoas.map((pessoa, index) => { return {id: index + 1, ...pessoa, };
+});
+console.log(pessoasComId);
 
-/* 6 */ const pessoasMaiorIdade = pessoas.filter(pessoa => pessoa.age> 18)
-console.log(pessoasMaiorIdade)
+/* 6 */ const pessoasMaiorIdade = pessoas.filter((pessoa) => pessoa.age > 18);
+console.log(pessoasMaiorIdade);
 
 /* 7 */ const mediaIdade = pessoas.reduce((soma, pessoa) => soma + pessoa.age, 0) / pessoas.length;
-console.log(mediaIdade.toFixed(0))
+console.log(mediaIdade.toFixed(0));
