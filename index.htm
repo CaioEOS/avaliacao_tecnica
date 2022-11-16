@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Formulário</h1>
+    </header>
+    <div class="container">
+        <section>
+            <form action="" method="post">
+                <div>
+                    <p><label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome e sobrenome" required />
+                </div>
+                <div>
+                    <p><label for="idade">Idade:</label>
+                    <input type="number" name="idade" id="idade" placeholder="Digite sua idade" required />
+                </div>
+                <div>
+                    <p><label for="iprofissao">Profissão:</label>
+                    <input type="text" name="profissao"  placeholder="Digite sua profissão" id="iprofissao" required />
+                </div>
+                <div>
+                    <p><label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required />
+                </div>
+                <div>
+                    <p><label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" required />
+                </div>
+                <div>
+                    <p><input type="button" value="Enviar" onclick="adicionar()">
+                </div>
+            </form>
+        </section>
+    </div>
+    <table id="myTable">
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
