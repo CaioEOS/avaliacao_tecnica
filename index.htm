@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <p><label for="telefone">Telefone:</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" required />
+                    <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" onkeyup="handlePhone(event)" required />
                 </div>
                 <div>
                     <p><input type="button" value="Enviar" onclick="adicionar()">

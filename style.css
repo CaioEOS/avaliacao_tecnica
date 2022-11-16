@@ -15,4 +15,17 @@ section {
   width: 500px;
   margin: auto;
   box-shadow: 5px 5px 10px #0000005d;
+  justify-content: center;
+  display: flex;
+}
+
+label {
+  display: block;
+}
+
+input {
+  padding: 15px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #0000005d;
 }

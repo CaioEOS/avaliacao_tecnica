@@ -1,3 +1,17 @@
+const handlePhone = (event) => {
+  let input = event.target
+  input.value = phoneMask(input.value)
+}
+
+const phoneMask = (value) => {
+  if (!value) return ""
+  value = value.replace(/\D/g,'')
+  value = value.replace(/(\d{2})(\d)/,"($1) $2")
+  value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+  return value
+}
+
+
 const pessoas = [
   {
     name: "Fabiana Araújo",
@@ -63,7 +77,9 @@ function adicionar() {
   var profissao = document.getElementById("profissao").value;
   var email = document.getElementById("email").value;
   var telefone = document.getElementById("telefone").value;
-  const hoje = new new Date().toLocaleDateString()
+
+  const dataAtual = new Date().toLocaleDateString()
+
   pessoas.push({name:nome, age:idade, profissao:profissao, email:email, telefone:telefone, datapreec:dataAtual});
   console.log(pessoas);
 }
