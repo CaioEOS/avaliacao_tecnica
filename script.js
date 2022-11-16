@@ -72,30 +72,6 @@ function adicionar() {
   console.log(pessoas);
 }
 
-
-/*function renderPessoas(data) {
-  data.map((pessoa) => {
-    var TR = document.createElement("TR");
-    var TDnome = document.createElement("TD");
-    var TDidade = document.createElement("TD");
-    var nome = document.createElement("p");
-    var idade = document.createElement("p");
-
-    TDnome.appendChild(nome);
-    TDidade.appendChild(idade);
-    TR.appendChild(TDnome);
-    TR.appendChild(TDidade);
-
-    nome.innerHTML = pessoa.name;
-    idade.innerHTML = pessoa.age;
-
-    document.getElementById("myTable").appendChild(TR);
-    console.log(pessoa);
-  });
-};
-renderPessoas(pessoas);
-*/
-
 /* 3 */ const pessoa = pessoas.find((pessoa) => pessoa.name === "Gabriel Gomes");
 console.log(pessoa);
 
