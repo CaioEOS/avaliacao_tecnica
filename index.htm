@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <header>
         <h1>Formulário</h1>
     </header>
-    <div class="container">
         <section>
             <form action="" name="formulario" method="post">
                 <div>
@@ -35,12 +33,11 @@
                     <p><label for="telefone">Telefone:</label>
                     <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" onkeyup="handlePhone(event)" required />
                 </div>
-                <div>
+                <div class="button">
                     <p><input type="button" value="Enviar" onclick="adicionar()">
                 </div>
             </form>
         </section>
-    </div>
     <table id="myTable">
     </table>
 

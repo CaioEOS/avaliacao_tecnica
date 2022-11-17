@@ -23,9 +23,35 @@ label {
   display: block;
 }
 
-input {
-  padding: 15px;
+input[type=text], [type=number], [type=email], [type=tel]{
   width: 300px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px #0000005d;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+input[type=button]{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 18px 70px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #244dbd;
+}
+
+.button {
+  justify-content: center;
+  display: flex;
 }
