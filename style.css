@@ -1,6 +1,14 @@
 body {
-  background: #1e88b9;
-  font: normal 15pt Arial;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: #111927;
+  background-image: radial-gradient(at 47% 33%,hsl(340.47, 77%, 40%) 0,transparent 59%),
+  radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
 }
 
 header {
@@ -9,49 +17,67 @@ header {
 }
 
 section {
-  background: #ffffff;
-  border-radius: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
   padding: 15px;
   width: 500px;
   margin: auto;
-  box-shadow: 5px 5px 10px #0000005d;
   justify-content: center;
   display: flex;
+
+  backdrop-filter: blur(7px) saturate(100%);
+  -webkit-backdrop-filter: blur(7px) saturate(100%);
+  background-color: rgba(17, 25, 40, 0.43);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
 }
 
 label {
   display: block;
 }
 
-input[type=text], [type=number], [type=email], [type=tel]{
+
+input[type="text"],
+[type="number"],
+[type="email"],
+[type="tel"] {
   width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid rgb(89, 0, 255);
 }
-
 input:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
 }
 
-input[type=button]{
-  background-color: #04AA6D;
+
+
+input[type="button"] {
+  background-color: #00ff37;
   border: none;
   color: white;
   padding: 18px 70px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  color: rgb(0, 0, 0);
 }
 
-input[type=button]:hover {
-  background-color: #244dbd;
+input[type="button"]:hover {
+  background-color: #2fa32f;
 }
 
 .button {
   justify-content: center;
   display: flex;
 }
+
+
