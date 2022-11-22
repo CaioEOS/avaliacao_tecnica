@@ -7,34 +7,41 @@
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body >
+    <div class="loader"></div>
     <header>
         <h1>Formulário</h1>
     </header>
         <section>
             <form action="" name="formulario" method="post">
-                <div >
-                    <p><label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome e sobrenome" required />
+                <div class="form">
+                    <p><label  for="nome">Nome:</label>
+                    <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome e sobrenome" required=""/>
+                    <span class="input-border"></span>
                 </div>
-                <div>
+                <div class="form">
                     <p><label for="idade">Idade:</label>
-                    <input type="number" name="idade" id="idade" placeholder="Digite sua idade" required />
+                    <input class="input" type="number" name="idade" id="idade" placeholder="Digite sua idade" required="" />
+                    <span class="input-border"></span>
                 </div>
-                <div>
+                <div class="form">
                     <p><label for="iprofissao">Profissão:</label>
-                    <input type="text" name="profissao" id="profissao" placeholder="Digite sua profissão" id="iprofissao" required />
+                    <input class="input" type="text" name="profissao" id="profissao" placeholder="Digite sua profissão" id="iprofissao" required=""/>
+                    <span class="input-border"></span>
                 </div>
-                <div>
+                <div class="form">
                     <p><label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required />
+                    <input class="input" type="email" name="email" id="email" placeholder="Digite seu e-mail" required="" />
+                    <span class="input-border"></span>
                 </div>
-                <div>
+                <div class="form">
                     <p><label for="telefone">Telefone:</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" onkeyup="handlePhone(event)" required />
+                    <input class="input" type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" onkeyup="handlePhone(event)" required="" />
+                    <span class="input-border"></span>
                 </div>
                 <div class="button">
                     <p><input type="button" value="Enviar" onclick="adicionar()">
+                    
                 </div>
             </form>
         </section>

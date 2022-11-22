@@ -7,8 +7,9 @@ body {
   padding: 0;
   margin: 0;
   background-color: #111927;
-  background-image: radial-gradient(at 47% 33%,hsl(340.47, 77%, 40%) 0,transparent 59%),
-  radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
+  background-image: 
+        radial-gradient(at 47% 33%, hsl(255.57, 72%, 60%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
 }
 
 header {
@@ -32,8 +33,13 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
+/* 
+=====================INPUT===============================
+*/
+
 /* reset input */
-.form__field:required, .form__field:invalid {
+.form__field:required,
+.form__field:invalid {
   box-shadow: none;
 }
 
@@ -42,22 +48,52 @@ label {
 }
 
 
-input[type="text"],
-[type="number"],
-[type="email"],
-[type="tel"] {
-  width: 300px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 2px solid rgb(89, 0, 255);
+.form {
+  --width-of-input: 280px;
+  --border-height: 1px;
+  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-after-color: #5891ff;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
 }
-input:focus {
-  box-shadow: 0 0 0 0;
-  outline: 0;
+/* estilo de entrada */
+.input {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+}
+/* estilo de borda animada */
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+/* Passe o mouse na entrada */
+input:hover {
+  background: var(--input-hovered-color);
 }
 
+input:focus {
+  outline: none;
+}
+/* aqui está o código da borda animada */
+input:focus ~ .input-border {
+  width: 100%;
+}
+
+/* 
+=====================BUTTON===============================
 
 
 input[type="button"] {
@@ -79,5 +115,37 @@ input[type="button"]:hover {
   justify-content: center;
   display: flex;
 }
+*/
 
+input[type="button"] {
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all .5s ease;
+}
 
+input[type="button"]:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+input[type="button"]:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.button {
+  justify-content: center;
+  display: flex;
+}
