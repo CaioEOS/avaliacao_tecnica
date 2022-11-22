@@ -15,12 +15,14 @@ body {
 header {
   color: #ffffff;
   text-align: center;
+  padding-top: 6em;
 }
 
 section {
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
   padding: 15px;
+  padding-top: 50px;
   width: 500px;
   margin: auto;
   justify-content: center;
