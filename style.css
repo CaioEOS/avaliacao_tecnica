@@ -96,27 +96,6 @@ input:focus ~ .input-border {
 
 /* 
 =====================BUTTON===============================
-
-
-input[type="button"] {
-  background-color: #00ff37;
-  border: none;
-  color: white;
-  padding: 18px 70px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-}
-
-input[type="button"]:hover {
-  background-color: #2fa32f;
-}
-
-.button {
-  justify-content: center;
-  display: flex;
-}
 */
 
 input[type="button"] {
