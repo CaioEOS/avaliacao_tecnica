@@ -1,44 +1,67 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  padding: 0;
+* {
   margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
   background-color: #111927;
   background-image: 
-        radial-gradient(at 47% 33%, hsl(255.57, 72%, 60%) 0, transparent 59%), 
-        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
-}
-
-header {
-  color: #ffffff;
-  text-align: center;
-  padding-top: 6em;
-}
-
-section {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  padding: 15px;
-  padding-top: 50px;
-  width: 500px;
-  margin: auto;
-  justify-content: center;
+      radial-gradient(at 51% 50%, hsl(271.91, 99%, 54%) 0, transparent 100%), 
+      radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+  
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-  backdrop-filter: blur(7px) saturate(100%);
-  -webkit-backdrop-filter: blur(7px) saturate(100%);
-  background-color: rgba(17, 25, 40, 0.43);
+main.container {
+  color: #ffffff;
+
+  backdrop-filter: blur(16px) saturate(70%);
+  -webkit-backdrop-filter: blur(16px) saturate(70%);
+  background-color: rgba(17, 25, 40, 0.34);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+
+  max-height: 570px;
+  max-width: 70vh;
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
+
+main h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/*
+.input {
+  position: relative;
+}
+
+.imput input {
+  outline: none;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.input input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+*/
+
+
 
 /* 
 =====================INPUT===============================
 */
-
 /* reset input */
 .form__field:required,
 .form__field:invalid {
@@ -46,22 +69,23 @@ section {
 }
 
 label {
+  margin-top: 1rem;
   display: block;
 }
 
-
 .form {
-  --width-of-input: 280px;
+  --width-of-input: 350px;
   --border-height: 1px;
-  --border-before-color: rgba(221, 221, 221, 0.39);
-  --border-after-color: #5891ff;
+  --border-before-color: #dddddd;
+  --border-after-color: #5d18dc;
   --input-hovered-color: #4985e01f;
   position: relative;
   width: var(--width-of-input);
 }
+
 /* estilo de entrada */
 .input {
-  color: #fff;
+  color: #ffffff;
   font-size: 0.9rem;
   background-color: transparent;
   width: 100%;
@@ -71,6 +95,7 @@ label {
   border: none;
   border-bottom: var(--border-height) solid var(--border-before-color);
 }
+
 /* estilo de borda animada */
 .input-border {
   position: absolute;
@@ -81,6 +106,7 @@ label {
   left: 0;
   transition: 0.3s;
 }
+
 /* Passe o mouse na entrada */
 input:hover {
   background: var(--input-hovered-color);
@@ -89,20 +115,22 @@ input:hover {
 input:focus {
   outline: none;
 }
+
 /* aqui está o código da borda animada */
 input:focus ~ .input-border {
   width: 100%;
 }
 
+
 /* 
 =====================BUTTON===============================
 */
-
 input[type="button"] {
+  margin-top: 2rem;
   padding: 17px 40px;
   border-radius: 50px;
   border: 0;
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -113,15 +141,15 @@ input[type="button"] {
 input[type="button"]:hover {
   letter-spacing: 3px;
   background-color: hsl(261deg 80% 48%);
-  color: hsl(0, 0%, 100%);
-  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  color: #ffffff;
+  box-shadow: #5d18dc 0px 7px 29px 0px;
 }
 
 input[type="button"]:active {
   letter-spacing: 3px;
   background-color: hsl(261deg 80% 48%);
-  color: hsl(0, 0%, 100%);
-  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  color: #ffffff;
+  box-shadow: #5d18dc 0px 0px 0px 0px;
   transform: translateY(10px);
   transition: 100ms;
 }

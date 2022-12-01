@@ -7,44 +7,40 @@
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body >
-    <div class="loader"></div>
-    <header>
-        <h1>Formulário</h1>
-    </header>
-        <section>
+<body>
+    <main class="container">
+            <h1>Cadastro</h1>
             <form action="" name="formulario" method="post">
                 <div class="form">
                     <p><label  for="nome">Nome:</label>
-                    <input class="input" type="text" name="nome" id="nome" placeholder="Digite seu nome e sobrenome" required=""/>
+                    <input class="input" type="text" name="nome" id="nome" placeholder="" required=""/>
                     <span class="input-border"></span>
                 </div>
                 <div class="form">
                     <p><label for="idade">Idade:</label>
-                    <input class="input" type="number" name="idade" id="idade" placeholder="Digite sua idade" required="" />
+                    <input class="input" type="number" name="idade" id="idade" placeholder="" required="" />
                     <span class="input-border"></span>
                 </div>
                 <div class="form">
                     <p><label for="iprofissao">Profissão:</label>
-                    <input class="input" type="text" name="profissao" id="profissao" placeholder="Digite sua profissão" id="iprofissao" required=""/>
+                    <input class="input" type="text" name="profissao" id="profissao" placeholder="" id="iprofissao" required=""/>
                     <span class="input-border"></span>
                 </div>
                 <div class="form">
                     <p><label for="email">E-mail:</label>
-                    <input class="input" type="email" name="email" id="email" placeholder="Digite seu e-mail" required="" />
+                    <input class="input" type="email" name="email" id="email" placeholder="" required="" />
                     <span class="input-border"></span>
                 </div>
                 <div class="form">
                     <p><label for="telefone">Telefone:</label>
-                    <input class="input" type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" onkeyup="handlePhone(event)" required="" />
+                    <input class="input" type="tel" name="telefone" id="telefone" placeholder="" maxlength="15" onkeyup="handlePhone(event)" required="" />
                     <span class="input-border"></span>
                 </div>
                 <div class="button">
-                    <p><input type="button" value="Enviar" onclick="adicionar()">
-                    
+                    <p><input type="button" value="Enviar" onclick="adicionar()"> 
                 </div>
             </form>
-        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

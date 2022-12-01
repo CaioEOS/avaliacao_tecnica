@@ -87,7 +87,7 @@ function adicionar() {
 /* 3 */ const pessoa = pessoas.find((pessoa) => pessoa.name === "Gabriel Gomes");
 console.log(pessoa);
 
-/* 4 */ const criarVetor = pessoas.map((pessoa) => pessoa.name);
+/* 4 */ const criarVetor = pessoas.map((pessoa) => pessoa.name[1]);
 console.log(criarVetor);
 
 /* 5 */ const pessoasComId = pessoas.map((pessoa, index) => { return {id: index + 1, ...pessoa, };
